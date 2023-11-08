@@ -47,4 +47,57 @@
   getUser(adminUser);
 
   //
+  // Type guard using instance of
+  class Animal {
+    name: string;
+    species: string;
+
+    constructor(name: string, species: string) {
+      this.name = name;
+      this.species = species;
+    }
+
+    makeSound() {
+      console.log("making sound");
+    }
+  }
+
+  class Dog extends Animal {
+    constructor(name: string, species: string) {
+      super(name, species);
+    }
+
+    makeBark() {
+      console.log("making Barking");
+    }
+  }
+
+  class Cat extends Animal {
+    constructor(name: string, species: string) {
+      super(name, species);
+    }
+
+    catMew() {
+      console.log("making Mewing");
+    }
+  }
+
+  // use in instanceof
+  const getAnimal = (animal: Animal) => {
+    if (animal instanceof Dog) {
+      animal.makeBark();
+    } else if (animal instanceof Cat) {
+      animal.catMew();
+    } else {
+      animal.makeSound();
+    }
+  };
+
+  // object
+  const dog = new Dog("Dog vhai", "dog");
+  const cat = new Cat("Cat vhai", "cat");
+
+  getAnimal(dog);
+
+  //
 }
