@@ -6,4 +6,4 @@ if (my_age > 18) {
 else {
     console.log("not adult");
 }
-// ts-node-dev --respawn --transpile-only ./module-2/src/Asynchronous.ts
+// ts-node-dev --respawn --transpile-only ./module-3/src/Getter_and_setter.ts
